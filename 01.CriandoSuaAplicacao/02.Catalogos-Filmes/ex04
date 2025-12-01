@@ -1,0 +1,12 @@
+<?php
+$ano = 2020;
+$veri = $ano%4;
+
+if ($veri == 0){
+    echo "$ano é bissexto";
+}
+else{
+    echo "O ano inserido nao é bissexto";
+}
+
+?>
