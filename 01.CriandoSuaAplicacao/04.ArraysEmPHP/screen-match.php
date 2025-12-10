@@ -4,15 +4,19 @@ echo "Bem vindo ao Screen Match!" . PHP_EOL;
 $nomeFilme = "Top Gun - Maverick";
 $anoLancamento = 2022;
 
-$quantidadeDeNotas = $argc-1;
-$somaDeNotas = 0;
 
-for($contador =1; $contador < $argc; $contador++){
-    $somaDeNotas +=$argv[$contador]; 
+$notas = [];
+
+for($i = 0; $i < $argc; $i++){
+    $notas[$i] = (float) $argv[$i]; 
 }
+ 
 
-$notaFilme = $somaDeNotas/$quantidadeDeNotas;
+$quantidadeDeNotas = count($notas)-1;
+$notaFilme = array_sum($notas)/$quantidadeDeNotas;
 $planoPrime = true;
+
+echo $notaFilme. "\n";
 
 $incluidoNoPlano = $planoPrime || $anoLancamento <2020;
 
@@ -36,5 +40,5 @@ $genero = match($nomeFilme){
 
 echo "O genero do filme é: $genero";
 
-
+//atualizacão aula
 $notasParaOFilme = [10,8,9,7.5,5,6.8];
