@@ -24,7 +24,7 @@ switch ($entrada) {
             echo "Saldo Insuficiente para operação";
             break;
         }
-        $saldo -=$saque;
+        $saldo -= $saque;
         echo "Seu saldo atual é de R$ $saldo";
         break;
 
@@ -42,5 +42,5 @@ switch ($entrada) {
         echo "Insira uma entrada válida!";
         break;
     }
-    system("clear");
+   
 }while($entrada!=4);
