@@ -7,4 +7,3 @@ function calcIMC(float $altura, float $peso):float {
     
     return $imc;
 }
-
